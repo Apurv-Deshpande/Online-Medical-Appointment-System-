@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Loginname:</strong>
+  <%= @booking.LoginName %>
+</p>
+
+<p>
+  <strong>Doctorname:</strong>
+  <%= @booking.DoctorName %>
+</p>
+
+<p>
+  <strong>Availabledate:</strong>
+  <%= @booking.AvailableDate %>
+</p>
+
+<p>
+  <strong>Timings:</strong>
+  <%= @booking.Timings %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @booking.Patient %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @booking.Doctor %>
+</p>
+
+<%= link_to 'Edit', edit_patient_booking_path(@patient, @booking) %> |
+<%= link_to 'Back',patient_bookings_path(@patient) %>

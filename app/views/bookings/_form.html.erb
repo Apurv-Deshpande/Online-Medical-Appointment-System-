@@ -1,0 +1,46 @@
+
+<%= form_for([@patient, @booking]) do |f| %>
+  <% if @booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% @booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+
+
+  <div class="field">
+    <%= f.label :LoginName %><br>
+    <%= f.text_field :LoginName %>
+  </div>
+  <div class="control-group">
+    <%= f.label "DoctorName",class: 'control-label' %><br>
+    <div class= "controls">
+    <%=f.select(:DoctorName, options_for_select([['Andy','Andy'],['Robert','Robert']]))%>
+   </div>  
+  </div>
+  <div class="field">
+    <%= f.label :AvailableDate %><br>
+    <%= f.date_select :AvailableDate %>
+  </div>
+  <div class="field">
+    <%= f.label :Timings %><br>
+    <%= f.time_select :Timings %>
+  </div>
+  <div class="field">
+    <%= f.label :patient_id %><br>
+    <%= f.text_field :patient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor_id %><br>
+    <%= f.text_field :doctor_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

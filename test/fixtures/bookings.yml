@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  LoginName: MyString
+  DoctorName: MyString
+  AvailableDate: 2015-12-02
+  Timings: 2015-12-02 00:33:48
+  Patient_id: 
+  Doctor_id: 
+
+two:
+  LoginName: MyString
+  DoctorName: MyString
+  AvailableDate: 2015-12-02
+  Timings: 2015-12-02 00:33:48
+  Patient_id: 
+  Doctor_id: 

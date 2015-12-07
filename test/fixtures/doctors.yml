@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  DoctorName: MyString
+  Specialization: MyString
+  HospitalName: MyString
+  ADate: 2015-12-02
+
+two:
+  DoctorName: MyString
+  Specialization: MyString
+  HospitalName: MyString
+  ADate: 2015-12-02

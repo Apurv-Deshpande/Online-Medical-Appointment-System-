@@ -1,0 +1,18 @@
+
+ <% for booking in @bookings %>
+      <tr>
+        <td><%= booking.LoginName %></td>
+        <td><%= booking.DoctorName %></td>
+        <td><%= booking.AvailableDate %></td>
+        <td><%= booking.Timings %></td>
+        <td><%= booking.Patient %></td>
+        <td><%= booking.Doctor %></td>
+        <td><%= link_to 'Show', patient_booking_path(@patient, booking) %></td>
+        <td><%= link_to 'Edit', edit_patient_booking_path(@patient, booking) %></td>
+        <td><%= link_to 'Destroy', patient_booking_path(@patient, booking), confirm: 'Are you sure?', :method => :delete  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New Booking', new_patient_booking_path(@patient) %>
+<%= link_to 'Back to Patient', @patient %>

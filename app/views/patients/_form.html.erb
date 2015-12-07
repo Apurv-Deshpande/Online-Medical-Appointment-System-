@@ -1,0 +1,49 @@
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %><br>
+    <%= f.text_field :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Age %><br>
+    <%= f.number_field :Age %>
+  </div>
+  <div class="field">
+    <%= f.label :Height %><br>
+    <%= f.text_field :Height %>
+  </div>
+  <div class="field">
+    <%= f.label :Weight %><br>
+    <%= f.text_field :Weight %>
+  </div>
+  <div class="field">
+    <%= f.label :BloodGroup %><br>
+    <%= f.text_field :BloodGroup %>
+  </div>
+  <div class="field">
+    <%= f.label :Sugar %><br>
+    <%= f.text_field :Sugar %>
+  </div>
+  <div class="field">
+    <%= f.label :BloodPressure %><br>
+    <%= f.text_field :BloodPressure %>
+  </div>
+  <div class="field">
+    <%= f.label :RegDate %><br>
+    <%= f.date_select :RegDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

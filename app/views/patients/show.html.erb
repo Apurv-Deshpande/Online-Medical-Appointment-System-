@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @patient.Name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @patient.Age %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @patient.Height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @patient.Weight %>
+</p>
+
+<p>
+  <strong>Bloodgroup:</strong>
+  <%= @patient.BloodGroup %>
+</p>
+
+<p>
+  <strong>Sugar:</strong>
+  <%= @patient.Sugar %>
+</p>
+
+<p>
+  <strong>Bloodpressure:</strong>
+  <%= @patient.BloodPressure %>
+</p>
+
+<p>
+  <strong>Regdate:</strong>
+  <%= @patient.RegDate %>
+</p>
+<h2>Bookings</h2>
+<% @patient.bookings.each do |booking| %>
+<p>
+<b></b>Booking details:</b>
+<%= booking.details %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>
+<%= link_to 'Show Bookings', patient_bookings_path(@patient) %>
+

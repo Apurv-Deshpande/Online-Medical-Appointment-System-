@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @profile.FirstName %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @profile.LastName %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @profile.BirthDate %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @profile.City %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @profile.Country %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @profile.Pincode %>
+</p>
+
+<p>
+  <strong>Contactno:</strong>
+  <%= @profile.ContactNo %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.Email %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @profile.user %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
+<%= link_to 'Register my Patient profile' , new_patient_path %>
