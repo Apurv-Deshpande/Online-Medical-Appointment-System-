@@ -12,9 +12,7 @@
     </div>
   <% end %>
  
-
-
-  <div class="field">
+<div class="field">
     <%= f.label :LoginName %><br>
     <%= f.text_field :LoginName %>
   </div>
@@ -40,6 +38,18 @@
     <%= f.label :doctor_id %><br>
     <%= f.text_field :doctor_id %>
   </div>
+   <div class="field">
+First Sitting:
+<%= check_box_tag 'booking[First_Sitting]', 'First Sitting' %>
+</div>
+<div class="field">
+Follow Up:
+<%= check_box_tag 'booking[Follow_Up]', 'Follow_Up' %>
+</div>
+<div class="field">
+Routine checkup:
+<%= check_box_tag 'booking[Routine_checkup]', 'Routine_checkup' %>
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,5 +1,4 @@
-
- <% for booking in @bookings %>
+<% for booking in @bookings %>
       <tr>
         <td><%= booking.LoginName %></td>
         <td><%= booking.DoctorName %></td>
@@ -12,7 +11,6 @@
         <td><%= link_to 'Destroy', patient_booking_path(@patient, booking), confirm: 'Are you sure?', :method => :delete  %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+  
 <%= link_to 'New Booking', new_patient_booking_path(@patient) %>
 <%= link_to 'Back to Patient', @patient %>

@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+
   <strong>Name:</strong>
   <%= @patient.Name %>
 </p>
@@ -39,11 +40,15 @@
   <strong>Regdate:</strong>
   <%= @patient.RegDate %>
 </p>
+
 <h2>Bookings</h2>
 <% @patient.bookings.each do |booking| %>
 <p>
-<b></b>Booking details:</b>
-<%= booking.details %>
+<b>Booking details:</b>
+<%= booking.LoginName %>
+<%= booking.DoctorName %>
+<%= booking.AvailableDate %>
+<%= booking.Timings %>
 </p>
 <% end %>
 
